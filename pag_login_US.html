@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LERÊ - LOGIN</title>
+    <link rel="stylesheet" href="estilo_pagloginUS.css">
+</head>
+<body>
+    <div class="box">
+        <form action="login.php" method="POST">
+            <legend><b>Bem Vindo(a)!</b></legend>
+            <br><br>
+            <div class="inputBox">
+                <input type="email" name="email" id="email" class="inputUser" autocomplete="off" required>
+                <label for="email" class="labelInput">Email</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="password" name="senha" id="senha" class="inputUser" autocomplete="off" required>
+                <label for="senha" class="labelInput">Senha</label>
+            </div>
+            <!-- Mensagens de erro usando spans -->
+            <span id="error-message" style="color:red; display: none;"></span>
+            <div class="link">
+                <p><a href="#">Esqueceu a senha?</a></p>
+            </div>
+            <input type="submit" name="submit" id="submit" value="Logar">
+            <hr>
+            <div class="cadastro">
+                <p>Ainda não possui uma conta? <a href="pag_cadastro_US.html"><b>Cadastre-se</b></a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Lê os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+
+        // Exibe a mensagem de erro apropriada
+        const errorMessage = document.getElementById('error-message');
+        if (error === 'incorrect_password') {
+            errorMessage.textContent = 'Senha incorreta!';
+            errorMessage.style.display = 'block';
+        } else if (error === 'user_not_found') {
+            errorMessage.textContent = 'Usuário não encontrado!';
+            errorMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

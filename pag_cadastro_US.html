@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LERÊ - CADASTRO</title>
+    <link rel="stylesheet" href="estilo_pagcadastroUS.css">
+    <script src="./cadastro_JS.js" defer></script>
+</head>
+<body>
+    <div class="box">
+        <form id="form" action="./cadastro_php.php" method="post">
+            <fieldset>
+                <legend><b>Cadastro de Clientes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" autocomplete="off" required>
+                    <label for="nome" class="labelInput">Nome Completo</label>
+                    <span class="span_required">Nome deve conter no mínimo 3 caracteres</span>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" autocomplete="off" required>
+                    <label for="email" class="labelInput">Email</label>
+                    <span class="span_required">Digite um email válido</span>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser" autocomplete="off" required>
+                    <label for="senha" class="labelInput">Senha</label>
+                    <span class="span_required">Digite sua senha com no mínimo 8 caracteres</span>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="confirmar_senha" id="confirmar_senha" class="inputUser" autocomplete="off" required>
+                    <label for="confirmar_senha" class="labelInput">Confirmar Senha</label>
+                    <span class="span_required">Senhas devem ser compatíveis</span>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="telefone" id="telefone" class="inputUser" autocomplete="off" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <br>
+                <label for="data_nasc"><b>Data de nascimento</b></label>
+                <input type="date" name="data_nasc" id="data_nasc" required>
+                <p>Possui alguma alergia?</p>
+                <input type="radio" id="input_nao" name="escolha" value="nao" required>
+                <label for="nao">Não</label>
+                <input type="radio" id="input_sim" name="escolha" value="sim" required>
+                <label for="sim">Sim</label>
+                <div id="textarea_alergia" style="display:none;">
+                    <p>Qual a sua alergia?</p>
+                    <textarea id="escritaUS" name="descricao_doenca"></textarea>
+                </div>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

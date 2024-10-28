@@ -1,0 +1,142 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #9964ca, #6d86ca);
+ 
+}
+
+legend{
+   
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+  
+}
+
+label{
+    font-size: 15px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 13.5px;
+    
+}
+
+
+
+
+.inputBox{
+    position: relative;
+
+}
+
+.box{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 25%;
+    height: 60%;
+    color: whitesmoke;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    
+
+}
+.labelInput{
+    position: absolute;
+    top: -40%;
+    transition: .3s;
+    right: 90%;
+}
+
+#email{
+    right: 91%;
+}
+
+
+
+@media (max-width: 1366px) {
+
+    .labelInput{
+        position: absolute;
+        top: -40%;
+        transition: .3s;
+       
+    }
+    
+    #email{
+        position: absolute;
+        top: -40%;
+        transition: .3s;
+    }
+    
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    
+    color: #7784da;
+   
+
+} 
+
+.inputUser:focus,.inputUser:valid{
+    border: 1px solid #7784da;
+}
+
+
+.inputUser{
+    background: none;
+    border: 1px solid white;
+    padding: 7px;
+    outline: none;
+    color: whitesmoke;
+    font-size: 15px;
+    width: 96%;
+    letter-spacing: 2px;
+    margin-top: 9px;
+    
+    border-radius: 5px;
+    transition: .3s;
+}
+
+#submit{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-image: linear-gradient(to right, #98a0d6, #8290ee );
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: whitesmoke;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+#submit:hover{
+    background-image: linear-gradient(to right, #7d84b1, #616fc9 );
+}
+
+
+.cadastro{
+    text-align: center;
+    font-size: 14px;
+}
+
+.link{
+    text-align: right;
+}
+
+span{
+   
+    font-size: 12px;
+    color: red;
+}
+
