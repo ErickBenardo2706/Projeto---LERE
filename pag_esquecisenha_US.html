@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LERÊ - ESQUECIA SENHA</title>
+    <link rel="stylesheet" href="./estilo.esquecisenhaUS.css">
+</head>
+<body>
+    <div class="box">
+        <form action="login.php" method="POST">
+            <legend><b>Redefinição de <br>
+                senha!</b></legend>
+            
+            <p>Informe um email e enviaremos um link <br>
+            para recuperação da sua senha.</p>
+            <div class="inputBox">
+                <input type="email" name="email" id="email" class="inputUser" autocomplete="off" required>
+                <label for="email" class="labelInput">Email</label>
+            </div>
+            <br><br>
+            <input type="submit" name="submit" id="submit" value="Enviar link de recuperação">
+        </form>
+    </div>
+
+    
+</body>
+</html>

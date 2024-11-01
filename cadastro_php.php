@@ -5,7 +5,16 @@ $username = "root";
 $password = ""; 
 $dbname = "lere";
 
+// Cria a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verifica a conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+
+session_start(); // Inicia a sessão
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Captura os dados do formulário
     $nome = $_POST['nome'];
@@ -18,17 +27,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insere os dados no banco
     $sql = "INSERT INTO cadastro (nome_completo, email, senha, telefone, data_nasc, possui_doenca, descricao_doenca) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    
+
     // Prepare a consulta
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssssis", $nome, $email, $senha, $telefone, $data_nasc, $possui_doenca, $descricao_doenca);
-    
+
     if ($stmt->execute()) {
-        echo "Cadastro realizado com sucesso!";
-        header("Location: pag_inicial_US.html");
+        // Cadastro realizado com sucesso
+        $_SESSION['nome_completo'] = $nome; // Armazena o nome na sessão
+        header("Location: pag_inicial_US.php"); // Redireciona para a página inicial
+        exit();
     } else {
         echo "Erro: " . $stmt->error;
     }
 
     $stmt->close();
 }
+
+$conn->close(); // Fecha a conexão com o banco de dados
+?>

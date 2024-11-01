@@ -3,9 +3,9 @@ session_start();
 
 // Conexão ao banco de dados
 $servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "lere"; 
+$username = "root";
+$password = "";
+$dbname = "lere";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -15,36 +15,34 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    // Captura e higieniza os dados do formulário
+    $email = trim($_POST['email']);
+    $senha = trim($_POST['senha']);
 
-    // Variável para armazenar mensagens de erro
-    $error = '';
-
-    // Verifica se o email existe
+    // Prepara a consulta SQL
     $sql = "SELECT * FROM cadastro WHERE email='$email'";
     $result = $conn->query($sql);
-    
-    if ($result->num_rows > 0) {
+
+    // Verifica se encontrou o usuário
+    if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        // Verifica a senha diretamente
-        if ($senha == $row['senha']) {
-            // Login bem-sucedido
+
+        // Verifica se a senha está correta
+        if ($senha === $row['senha']) {
             $_SESSION['email'] = $email;
-            header("Location: pag_inicial_US.html"); // Redireciona para a página inicial
+            $_SESSION['nome_completo'] = $row['nome_completo']; // Armazena o nome completo na sessão
+
+            // Redireciona para a página inicial após o login
+            header("Location: pag_inicial_US.php");
             exit();
         } else {
-            // Senha incorreta
-            $error = 'incorrect_password';
+            // Redireciona para a página de login com erro de senha incorreta
+            header("Location: pag_login_US.html?error=incorrect_password");
+            exit();
         }
     } else {
-        // Usuário não encontrado
-        $error = 'user_not_found';
-    }
-
-    // Retorna o erro via URL para a página de login
-    if ($error) {
-        header("Location: pag_login_US.html?error=$error");
+        // Redireciona para a página de login com erro de usuário não encontrado
+        header("Location: pag_login_US.html?error=user_not_found");
         exit();
     }
 }

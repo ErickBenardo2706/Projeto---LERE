@@ -1,52 +1,78 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
-   
 }
 
-
-
-a{
+a {
     text-decoration: none;
 }
 
-body{
+body {
     margin: 0;
     background-color: #eeeeee;
 }
 
-
-
-
-#banner{
+#banner {
     width: 100%; 
-    height: 100%px; 
+    height: 100%; 
 }
 
-#img_logo{
+#img_logo {
     width: 150px;
     margin-left: 90px;
     margin-bottom: -26px;
 }
 
-.cabecalho1{
+.cabecalho1 {
     width: 100%;
-    background-color:#b5bef7;
+    background-color: #b5bef7;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    position: relative; 
 }
 
-.menu a{
-  
-        padding: 5px;
-        text-decoration: none;
+.logado_ou_nao img {
+    width: 8%;
+}
 
+.logado_ou_nao {
+    position: absolute;
+    top: 0;
+    right: 2%; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #551A8B;
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    display: none; /* Oculto por padrão */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 10px; /* Ajuste conforme necessário */
+    padding: 10px;
+    border-radius: 5px;
+}
+.dropdown a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.logado_ou_nao:hover .dropdown {
+    display: block;
+}
+
+.menu a {
+    padding: 5px;
+    text-decoration: none;
 }
 
 .menu ul li { 
-  
     font-size: 18px;
-    list-style:none;
+    list-style: none;
     display: inline; 
-    padding: 2px 75px; 
+    padding: 2px 70px; 
     color: #333; 
     text-decoration: none; 
     position: relative;
@@ -55,30 +81,24 @@ body{
     color: rgb(42, 50, 119);
 }
 
- 
-
-
 .menu ul li a:hover {
     color: #2849a1; 
     text-decoration: underline 2px;
-    transition: color .2s
+    transition: color .2s;
 }
 
-
-.menu_fotos{
+.menu_fotos {
     color: #551A8B;
     display: flex;
     text-align: center;
     margin-left: 330px;
-    
 }
 
-.menu_fotos:hover{
+.menu_fotos:hover {
     cursor: pointer;
 }
 
-.espaco_foto{
-    
+.espaco_foto {
     padding: 10px;
     width: 300px;
     transition: transform 0.3s ease;
@@ -86,12 +106,9 @@ body{
 
 .espaco_foto:hover {
     transform: translateY(-10px); 
-
 }
 
-
-
-button{
+button {
     display: block;
     margin: 20px auto; 
     color: #551A8B;
@@ -105,14 +122,12 @@ button{
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .26);
 }
 
-button:hover{
+button:hover {
     color: #eeeeee;
     background-color: #9eaaf3;
     transition: color .2s;
     cursor: pointer;
 }
-
-
 
 /* Media Query para telas menores que 1200px (PCs menores) */
 @media (max-width: 1366px) {
@@ -128,21 +143,13 @@ button:hover{
         top: -65px;
     }
 
-    .menu_fotos{
-        
-        margin-left: 120px;
-        
+    .menu_fotos {
+        margin-left: 120px;    
     }
 
-    .espaco_foto{
-    
-      
-        width: 260px;
-        
+    .espaco_foto {
+        width: 260px;   
     }
-
-
-
 }
 
 /* Media Query para telas menores que 1024px (PCs ainda menores) */
@@ -156,11 +163,10 @@ button:hover{
         padding: 2px 30px; /* Menor espaçamento entre os itens do menu */
         left: 100px;
     }
-    .menu_fotos{
 
-       display: contents;
+    .menu_fotos {
+        display: contents;
         text-align: center;
-        margin-left: 200px;
-        
+        margin-left: 200px;   
     }
 }

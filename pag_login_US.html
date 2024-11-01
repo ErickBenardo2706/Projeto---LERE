@@ -14,17 +14,19 @@
             <br><br>
             <div class="inputBox">
                 <input type="email" name="email" id="email" class="inputUser" autocomplete="off" required>
-                <label for="email" class="labelInput">Email</label>
+                <label for="email" class="labelInput" id="label_email">Email</label>
             </div>
             <br><br>
             <div class="inputBox">
-                <input type="password" name="senha" id="senha" class="inputUser" autocomplete="off" required>
-                <label for="senha" class="labelInput">Senha</label>
+                <div class="ajuste_display_senha">
+                    <input type="password" name="senha" id="senha" class="inputUser" autocomplete="off" required>
+                    <label for="senha" class="labelInput" id="label_senha">Senha</label>
+                </div>
             </div>
             <!-- Mensagens de erro usando spans -->
             <span id="error-message" style="color:red; display: none;"></span>
             <div class="link">
-                <p><a href="#">Esqueceu a senha?</a></p>
+                <p><a href="./pag_esquecisenha_US.html">Esqueceu a senha?</a></p>
             </div>
             <input type="submit" name="submit" id="submit" value="Logar">
             <hr>
@@ -48,6 +50,22 @@
             errorMessage.textContent = 'Usuário não encontrado!';
             errorMessage.style.display = 'block';
         }
+
+        function toggleDropdown() {
+    const dropdown = document.getElementById("menuDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+// Fechar o dropdown se o usuário clicar fora dele
+window.onclick = function(event) {
+    if (!event.target.matches('#login_icon')) {
+        const dropdowns = document.getElementsByClassName("dropdown");
+        for (let i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].style.display = "none";
+        }
+    }
+}
+
     </script>
 </body>
 </html>
