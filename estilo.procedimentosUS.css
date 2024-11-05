@@ -22,6 +22,46 @@ body{
     margin-bottom: -250px;
 }
 
+
+.logado_ou_nao img {
+    width: 8%;
+}
+
+.logado_ou_nao {
+    position: absolute;
+    top: 0;
+    right: -6%; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #551A8B;
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    display: none; /* Oculto por padrão */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+   
+    right: 25%; 
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+.dropdown a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.logado_ou_nao:hover .dropdown {
+    display: block;
+}
+
+
+
+
+
 .menu a{
   
     padding: 5px;

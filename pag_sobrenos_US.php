@@ -1,16 +1,23 @@
+<?php
+session_start();
+$nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] : null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilo_pagsobrenosUS.css">
+    <script src="./pag_sobrenosJS.js" defer></script>
     <title>LERÊ - SOBRE NÓS</title>
 </head>
+
 <body>
-    
+
     <div class="cabecalho1">
-        
         <div class="logo">
             <img src="./imagens/logo.png" alt="logo" id="img_logo">
             <div class="menu">
@@ -18,16 +25,23 @@
                     <li><a href="./pag_inicial_US.php">INÍCIO</a></li>
                     <li><a href="">AGENDAMENTO</a></li>
                     <li><a href="./pag_contato_US.html">CONTATO</a></li>
-                    <li><a href="">SOBRE NÓS</a></li>
-                    <li><a href="./pag_login_US.html">LOGIN</a></li>
+                    <li><a href="./pag_sobrenos_US.php">SOBRE NÓS</a></li>
+                    <?php if (!$nome_usuario): ?>
+                        <li><a href="./pag_login_US.html">LOGIN</a></li>
+                    <?php endif; ?>
                 </ul>
-                
             </div>
         </div>
 
-    
-
-       
+        <?php if ($nome_usuario): ?>
+            <div class="logado_ou_nao">
+                <img src="./imagens/login_icon.png" alt="ícone de login" id="login_icon" onclick="toggleDropdown()">
+                <p id="nome_usuario">Seja bem-vindo(a), <?php echo htmlspecialchars($nome_usuario); ?>!</p>
+                <div class="dropdown" id="menuDropdown">
+                    <a href="./logout.php">Sair</a>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
 
     <div class="corpo">
@@ -57,16 +71,16 @@
             Na LERÊ, você encontrará um ambiente acolhedor e inovador, onde sua satisfação é a <br>
             nossa maior recompensa. Venha nos visitar e descubra como podemos realçar sua beleza e <br>
             proporcionar momentos inesquecíveis. <br>
-        
-            <br><br>
-        </div>
-        </p>
 
-       
+            <br><br>
+    </div>
+    </p>
+
+
 
     </div>
 
-   
+
     <div class="faixada">
         <img src="./imagens/Local1.png" alt="">
         <br><br><br>
@@ -74,4 +88,5 @@
 
     </div>
 </body>
+
 </html>

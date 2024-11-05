@@ -36,7 +36,7 @@ body {
 .logado_ou_nao {
     position: absolute;
     top: 0;
-    right: 2%; 
+    right: -6%; 
     display: flex;
     align-items: center;
     gap: 10px;
@@ -49,8 +49,9 @@ body {
     position: absolute;
     background-color: white;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    right: 10px; /* Ajuste conforme necessário */
+   
+    right: 25%; 
+    
     padding: 10px;
     border-radius: 5px;
 }
@@ -69,16 +70,18 @@ body {
 }
 
 .menu ul li { 
+  
     font-size: 18px;
-    list-style: none;
+    list-style:none;
     display: inline; 
-    padding: 2px 70px; 
+    padding: 2px 75px; 
     color: #333; 
     text-decoration: none; 
     position: relative;
     top: -75px;
     left: 470px;
     color: rgb(42, 50, 119);
+   
 }
 
 .menu ul li a:hover {
@@ -129,6 +132,19 @@ button:hover {
     cursor: pointer;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Media Query para telas menores que 1200px (PCs menores) */
 @media (max-width: 1366px) {
     #img_logo {
@@ -170,3 +186,5 @@ button:hover {
         margin-left: 200px;   
     }
 }
+
+
