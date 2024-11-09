@@ -1,0 +1,148 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    margin: 0;
+    background-color: #eeeeee;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #551A8B;
+}
+
+#img_logo {
+    width: 150px;
+    margin-left: 45%;
+    margin-bottom: -26px;
+}
+
+.cabecalho1 {
+    width: 100%;
+    background-color: #b5bef7;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+
+    padding-bottom: 2%;
+}
+
+
+.logado_ou_nao img {
+    width: 8%;
+}
+
+.logado_ou_nao {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #551A8B;
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    display: none;
+    /* Oculto por padrão */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+    right: 20%;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.logado_ou_nao:hover .dropdown {
+    display: block;
+}
+
+
+
+
+
+
+/*CSS Scann:*/
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-19 {
+    appearance: button;
+    background-color: #551A8B;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 10px;
+    /* Espaçamento entre os botões */
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 230px;
+
+}
+
+.button-19:after {
+    background-clip: padding-box;
+    background-color: #b760ff;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.button-19,
+.button-19:focus {
+    user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+    cursor: auto;
+}
+
+.button-19:active {
+    border-width: 4px 0 0;
+    background: none;
+}

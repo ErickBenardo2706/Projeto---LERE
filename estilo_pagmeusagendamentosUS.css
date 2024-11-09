@@ -1,0 +1,84 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    margin: 0;
+    background-color: #eeeeee;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #551A8B;
+    margin-bottom: 5%;
+}
+
+
+
+#img_logo {
+    width: 150px;
+    margin-left: 45%;
+    margin-bottom: -26px;
+}
+
+.cabecalho1 {
+    width: 100%;
+    background-color: #b5bef7;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+
+    padding-bottom: 2%;
+}
+
+
+.logado_ou_nao img {
+    width: 8%;
+}
+
+.logado_ou_nao {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #551A8B;
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    display: none;
+    /* Oculto por padrão */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+    right: 20%;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.logado_ou_nao:hover .dropdown {
+    display: block;
+}
+
+#img_sem_agendamento {
+    width: 10%;
+    margin-bottom: 20px;
+
+}
+
+.sem_agendamento {
+    text-align: center;
+    color: #551A8B;
+
+}

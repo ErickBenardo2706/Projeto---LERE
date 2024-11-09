@@ -11,10 +11,16 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo_paginicialUS.css">
-    <script src="./pag_inicialJS.js" defer>
 
-    </script>
     <title>LERÊ - HOME</title>
+
+    <script>
+        // Passando o status de login para o JavaScript (criação da variável global)
+        const isUserLoggedIn = <?php echo json_encode(!is_null($nome_usuario)); ?>;
+    </script>
+
+
+    <script src="./pag_inicialJS.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +30,7 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
             <div class="menu">
                 <ul>
                     <li><a href="./pag_inicial_US.php">INÍCIO</a></li>
-                    <li><a href="#" id="agendamentoLink">AGENDAMENTO</a></li>
+                    <li><a href="#" onclick="checkLoginStatus()">AGENDAMENTO</a></li>
                     <li><a href="./pag_contato_US.html">CONTATO</a></li>
                     <li><a href="./pag_sobrenos_US.php">SOBRE NÓS</a></li>
                     <?php if (!$nome_usuario): ?>
@@ -32,6 +38,8 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
                     <?php endif; ?>
                 </ul>
             </div>
+
+
         </div>
 
         <?php if ($nome_usuario): ?>
@@ -44,6 +52,7 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
             </div>
         <?php endif; ?>
     </div>
+
     <div class="home">
         <img src="./imagens/banner.png" alt="banner" id="banner">
         <div class="menu_fotos">
@@ -76,11 +85,6 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
             <button>CONHEÇA TODOS OS PROCEDIMENTOS DE ESTÉTICA FACIAL ➜</button>
         </a>
     </div>
-
-
-
-
-
 </body>
 
 </html>

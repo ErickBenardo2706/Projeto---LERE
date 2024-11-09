@@ -11,3 +11,14 @@ document.addEventListener("click", function(event) {
 });
 
     
+
+// Função para verificar o status de login antes de acessar o agendamento
+function checkLoginStatus() {
+    if (isUserLoggedIn) {
+        // Se o usuário estiver logado, redireciona para a página de agendamento
+        window.location.href = 'pag_agendamentoUS.php';
+    } else {
+        // Caso contrário, exibe o alerta solicitando login
+        alert('É necessário fazer login antes de acessar a página de agendamento.');
+    }
+}
