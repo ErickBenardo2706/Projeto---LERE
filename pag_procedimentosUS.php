@@ -12,8 +12,14 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LERÊ - Procedimentos</title>
     <link rel="stylesheet" href="estilo.procedimentosUS.css">
+    <title>LERÊ - Procedimentos</title>
+
+    <script>
+        // Passando o status de login para o JavaScript (criação da variável global)
+        const isUserLoggedIn = <?php echo json_encode(!is_null($nome_usuario)); ?>;
+    </script>
+
     <script src="./pag_procedimentosJS.js" defer></script>
 </head>
 
@@ -25,7 +31,7 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
             <div class="menu">
                 <ul>
                     <li><a href="./pag_inicial_US.php">INÍCIO</a></li>
-                    <li><a href="">AGENDAMENTO</a></li>
+                    <li><a href="#" onclick="checkLoginStatus()">AGENDAMENTO</a></li>
                     <li><a href="./pag_contato_US.html">CONTATO</a></li>
                     <li><a href="./pag_sobrenos_US.php">SOBRE NÓS</a></li>
                     <?php if (!$nome_usuario): ?>

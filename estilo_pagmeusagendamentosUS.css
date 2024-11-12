@@ -6,6 +6,7 @@
 body {
     margin: 0;
     background-color: #eeeeee;
+    overflow-x: hidden;
 }
 
 
@@ -20,7 +21,7 @@ h1 {
 
 #img_logo {
     width: 150px;
-    margin-left: 45%;
+    margin-left: 46%;
     margin-bottom: -26px;
 }
 
@@ -43,6 +44,8 @@ h1 {
     right: 1%;
     display: flex;
     align-items: center;
+    right: -10%;
+    top: 5px;
     gap: 10px;
     color: #551A8B;
 }
@@ -54,9 +57,8 @@ h1 {
     position: absolute;
     background-color: white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-
-    right: 20%;
-
+    right: 60%;
+    bottom: -60%;
     padding: 10px;
     border-radius: 5px;
 }

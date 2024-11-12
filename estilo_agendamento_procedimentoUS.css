@@ -1,0 +1,150 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    margin: 0;
+    background-color: #eeeeee;
+    overflow-x: hidden;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #551A8B;
+}
+
+
+
+
+#img_logo {
+    width: 150px;
+    margin-left: 46%;
+    margin-bottom: -26px;
+}
+
+.cabecalho1 {
+    width: 100%;
+    background-color: #b5bef7;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+
+    padding-bottom: 2%;
+}
+
+.corpo {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.move-left {
+    transform: translateX(-100%);
+
+}
+
+.logado_ou_nao img {
+    width: 8%;
+}
+
+.logado_ou_nao {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    display: flex;
+    align-items: center;
+    right: -10%;
+    top: 5px;
+    gap: 10px;
+    color: #551A8B;
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    display: none;
+    /* Oculto por padrão */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    right: 60%;
+    bottom: -60%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.logado_ou_nao:hover .dropdown {
+    display: block;
+}
+
+
+input[type="radio"] {
+    width: 17px;
+    height: 17px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #dcdcdc;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+input[type="radio"]:checked {
+    background-color: #551A8B;
+}
+
+.input_radio {
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #dcdcdc;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#button_proximo {
+    margin-top: 5px;
+    margin-left: 35%;
+    background-image: linear-gradient(to right, #98a0d6, #8290ee);
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: whitesmoke;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 30%;
+
+}
+
+#button_proximo:hover {
+    background-image: linear-gradient(to right, #7d84b1, #616fc9);
+}
+
+.input_checkbox {
+    width: 30%;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #dcdcdc;
+    font-size: 20px;
+
+}

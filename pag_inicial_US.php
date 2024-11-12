@@ -55,6 +55,8 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
 
     <div class="home">
         <img src="./imagens/banner.png" alt="banner" id="banner">
+
+        <h1>Nossos Procedimentos</h1>
         <div class="menu_fotos">
             <div id="Preenchimento_Facial">
                 <a href="./pag_procedimentosUS.html#procePreFA">

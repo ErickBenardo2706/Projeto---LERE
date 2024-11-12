@@ -40,7 +40,8 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
 
             <h1>Agendamento</h1>
 
-            <button class="button-19">Agendar</button>
+            <button class="button-19"
+                onclick="window.location.href='./pag_agendamento_procedimentoUS.php';">Agendar</button>
             <button class="button-19" onclick="window.location.href='./pag_meusagendamentosUS.php';">Meu
                 Agendamentos</button>
 
