@@ -24,6 +24,8 @@ h3 {
     color: #551A8B;
 }
 
+
+
 #img_logo {
     width: 150px;
     margin-left: 46%;
@@ -81,6 +83,51 @@ h3 {
     display: block;
 }
 
+#btn_cancelar {
+
+    background-color: rgb(255, 38, 38);
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+
+
+}
+
+#btn_cancelar:hover {
+    background-color: rgb(253, 60, 60);
+    cursor: pointer;
+}
+
+
+
+#btn_confirmar {
+    background-color: #551A8B;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+
+}
+
+#btn_confirmar:hover {
+    background-color: #5c2b8a;
+    cursor: pointer;
+
+}
+
+
+#modal {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#modal h3 {
+    font-size: 25px;
+}
+
 /*FullCalendar*/
 #calendar {
     max-width: 470px;
@@ -94,6 +141,9 @@ h3 {
 
 }
 
+#modal p {
+    color: rgb(90, 90, 90);
+}
 
 
 

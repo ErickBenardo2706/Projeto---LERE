@@ -59,9 +59,17 @@ $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION
         </div>
     </div>
 
+    <dialog id="modal">
+        <h3>Confirmar essa data?</h3>
+        <p>Será marcado para a data e horário selecionados.</p>
+        <button id="btn_cancelar">Cancelar</button>
+        <button type="submit" id="btn_confirmar">Confirmar agendamento</button>
+    </dialog>
+
+
 
     <script src="JavaScript/index.global.min.js"></script>
-    <script src="JavaScript/core/locales-all.global.min.js"></script>
+    <script src="JavaScript/core/locales/pt-br.global.min.js"></script>
 
 </body>
 

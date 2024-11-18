@@ -40,26 +40,34 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
                 <div class="input_radio" onclick="document.getElementById('input_ledterapia').click()">
                     <input type="radio" name="procedimento" id="input_ledterapia" value="Led Terapia" required>
                     <label for="input_ledterapia">Led Terapia</label>
+                    <label for="input_ledterapia" class="preco">R$ 200</label>
                 </div>
 
                 <div class="input_radio" onclick="document.getElementById('input_limpezadepele').click()">
                     <input type="radio" name="procedimento" id="input_limpezadepele" value="Limpeza De Pele">
                     <label for="input_limpezadepele">Limpeza De Pele</label>
+                    <label for="input_limpezadepele" class="preco">R$ 275</label>
                 </div>
 
                 <div class="input_radio" onclick="document.getElementById('input_microagulhamento').click()">
                     <input type="radio" name="procedimento" id="input_microagulhamento" value="Microagulhamento">
                     <label for="input_microagulhamento">Microagulhamento</label>
+                    <label for="input_microagulhamento" class="preco">R$ 550</label>
+
                 </div>
 
                 <div class="input_radio" onclick="document.getElementById('input_preenchimentofacial').click()">
                     <input type="radio" name="procedimento" id="input_preenchimentofacial" value="Preenchimento Facial">
                     <label for="input_preenchimentofacial">Preenchimento Facial</label>
+                    <label for="input_preenchimentofacial" class="preco">R$ 2.000</label>
+
                 </div>
 
                 <div class="input_radio" onclick="document.getElementById('input_preenchimentolabial').click()">
                     <input type="radio" name="procedimento" id="input_preenchimentolabial" value="Preenchimento Labial">
                     <label for="input_preenchimentolabial">Preenchimento Labial</label>
+                    <label for="input_preenchimentolabial" class="preco">R$ 1.650</label>
+
                 </div>
             </div>
             <!-- Botão que envia o formulário -->
