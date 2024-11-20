@@ -29,6 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verifica se a senha está correta
         if ($senha === $row['senha']) {
+            // Armazena os dados na sessão, incluindo o ID
+            $_SESSION['id'] = $row['id']; // Salva o ID na sessão
             $_SESSION['email'] = $email;
             $_SESSION['nome_completo'] = $row['nome_completo']; // Armazena o nome completo na sessão
 

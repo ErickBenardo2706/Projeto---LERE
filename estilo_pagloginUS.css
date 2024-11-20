@@ -236,6 +236,13 @@ span {
     .ajuste_display_senha {
         margin-top: 60px;
     }
+  
 
-
+}
+.botaoestilo{
+    background-color: transparent;
+    border: 0px solid transparent;
+    position: absolute;
+    top: 35%;
+    left: 92%;
 }

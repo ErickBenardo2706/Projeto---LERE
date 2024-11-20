@@ -1,6 +1,8 @@
 <?php
 session_start();
+$procedimento_id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] : null;
+$user_id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION['procedimento_escolhido'] : 'Nenhum procedimento selecionado';
 ?>
 <!DOCTYPE html>
@@ -11,6 +13,8 @@ $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilo.pag_agendamento_agendarUS.css">
     <title>LERÊ - AGENDAR</title>
+    <script src="pag_agendamento_agendarJS.js" defer></script>
+
     <script>
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -26,11 +30,10 @@ $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION
 
 
     </script>
-    <script src="pag_agendamento_agendarJS.js"></script>
+
 </head>
 
 <body>
-
     <div class="cabecalho1">
         <div class="logo">
             <img src="./imagens/logo.png" alt="logo" id="img_logo">
@@ -43,6 +46,7 @@ $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION
                 <div class="dropdown" id="menuDropdown">
                     <a href="./logout.php">Sair</a>
                 </div>
+                <div id="user_id" data-id="<?php echo $user_id !== null ? htmlspecialchars($user_id) : ''; ?>"></div>
             </div>
         <?php endif; ?>
     </div>
@@ -59,18 +63,34 @@ $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION
         </div>
     </div>
 
-    <dialog id="modal">
-        <h3>Confirmar essa data?</h3>
-        <p>Será marcado para a data e horário selecionados.</p>
-        <button id="btn_cancelar">Cancelar</button>
-        <button type="submit" id="btn_confirmar">Confirmar agendamento</button>
+
+
+
+
+    <dialog id="modalAgendamento">
+        <form id="formAgendamento">
+            <h2>Confirmar Agendamento</h2>
+            <p id="confirmarProcedimento">Data e horário selecionado:</p>
+            <button id="btn_cancelar" type="button">Cancelar</button>
+            <button id="btn_confirmar" type="button">Confirmar</button>
+        </form>
     </dialog>
+    <script>
+
+        // ponto que deu certo 
+        // Recupera o ID do procedimento da sessionStorage
+        const procedimentoId = sessionStorage.getItem('procedimento_id');
+
+        if (procedimentoId) {
+            console.log("ID do Procedimento Selecionado: " + procedimentoId);
+        } else {
+            console.log("Nenhum procedimento foi selecionado.");
+        }
 
 
-
+    </script>
     <script src="JavaScript/index.global.min.js"></script>
     <script src="JavaScript/core/locales/pt-br.global.min.js"></script>
-
 </body>
 
 </html>

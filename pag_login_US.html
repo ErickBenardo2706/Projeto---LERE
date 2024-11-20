@@ -19,8 +19,11 @@
             <br><br>
             <div class="inputBox">
                 <div class="ajuste_display_senha">
-                    <input type="password" name="senha" id="senha" class="inputUser" autocomplete="off" required>
-                    <label for="senha" class="labelInput" id="label_senha">Senha</label>
+                         <input type="password" name="senha" id="password" class="inputUser" autocomplete="off" required>
+                            <button type="button" class="botaoestilo" onclick="togglePassword()" id="toggleButton">
+                                <img src="imagens/eye-fill.png"id="toggleIcon" style="width: 21px; height: 21px;">
+                            </button>
+                         <label for="senha" class="labelInput" id="label_senha">Senha</label>
                 </div>
             </div>
             <!-- Mensagens de erro usando spans -->
@@ -65,7 +68,20 @@ window.onclick = function(event) {
         }
     }
 }
-
+function togglePassword() {
+        const passwordField = document.getElementById("password");
+        const toggleIcon = document.getElementById("toggleIcon");
+        
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            toggleIcon.src = "imagens/eye-slash-fill.png"; // Ícone de olho fechado
+           
+        } else {
+            passwordField.type = "password";
+            toggleIcon.src = "imagens/eye-fill.png"; // Ícone de olho aberto
+            
+        }
+    }
     </script>
 </body>
 </html>

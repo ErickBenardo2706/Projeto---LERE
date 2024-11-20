@@ -119,14 +119,20 @@ h3 {
 }
 
 
-#modal {
+#modalAgendamento {
     padding: 20px;
     border-radius: 10px;
 }
 
-#modal h3 {
+#modalAgendamento h3 {
     font-size: 25px;
 }
+
+#modalAgendamento p {
+    color: rgb(90, 90, 90);
+}
+
+
 
 /*FullCalendar*/
 #calendar {
@@ -139,10 +145,6 @@ h3 {
 
     cursor: pointer;
 
-}
-
-#modal p {
-    color: rgb(90, 90, 90);
 }
 
 
