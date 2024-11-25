@@ -171,3 +171,27 @@ input[type="radio"]:checked {
     font-size: 20px;
 
 }
+
+
+
+
+@media (max-width: 1366px) {
+
+    #img_logo {
+        width: 150px;
+        margin-left: 45%;
+        margin-bottom: -26px;
+    }
+
+
+    .logado_ou_nao {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        right: -14%;
+        top: 5px;
+        gap: 10px;
+        color: #551A8B;
+    }
+}

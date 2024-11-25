@@ -160,7 +160,7 @@ span {
         padding: 15px;
         border-radius: 15px;
         width: 27%;
-        height: 60%;
+        height: 65%;
         color: whitesmoke;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
 
@@ -236,10 +236,11 @@ span {
     .ajuste_display_senha {
         margin-top: 60px;
     }
-  
+
 
 }
-.botaoestilo{
+
+.botaoestilo {
     background-color: transparent;
     border: 0px solid transparent;
     position: absolute;

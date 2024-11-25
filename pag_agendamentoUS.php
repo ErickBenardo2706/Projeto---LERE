@@ -1,6 +1,8 @@
 <?php
 session_start();
 $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] : null;
+
+
 ?>
 
 
@@ -11,7 +13,7 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LERÊ - AGENDAMENTO</title>
-    <link rel="stylesheet" href="./estilo_pagagendamentoUS.css">
+    <link rel="stylesheet" href="estilo_pagagendamentoUS.css">
 </head>
 
 <body>

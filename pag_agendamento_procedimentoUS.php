@@ -9,7 +9,7 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilo_agendamento_procedimentoUS.css">
+    <link rel="stylesheet" href="estilo_agendamento_procedimentoUS.css">
     <title>LERÊ - AGENDAR</title>
     <script>
         // Função para definir o ID do procedimento na sessão

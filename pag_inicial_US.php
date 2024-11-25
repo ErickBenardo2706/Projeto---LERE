@@ -59,25 +59,25 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
         <h1>Nossos Procedimentos</h1>
         <div class="menu_fotos">
             <div id="Preenchimento_Facial">
-                <a href="./pag_procedimentosUS.html#procePreFA">
+                <a href="./pag_procedimentosUS.php#procePreFA">
                     <img src="./imagens/harmonização_facial.png" alt="harmonização_facial" class="espaco_foto">
                 </a>
                 <h3>Preenchimento <br> Facial</h3>
             </div>
             <div id="Microagulhamento_">
-                <a href="./pag_procedimentosUS.html#proceMicro">
+                <a href="./pag_procedimentosUS.php#proceMicro">
                     <img src="./imagens/microagulhamento.png" alt="microagulhamento" class="espaco_foto">
                 </a>
                 <h3>Microagulhamento</h3>
             </div>
             <div id="Limpeza_">
-                <a href="./pag_procedimentosUS.html#proceLimpeza">
+                <a href="./pag_procedimentosUS.php#proceLimpeza">
                     <img src="./imagens/limpeza.png" alt="limpeza" class="espaco_foto">
                 </a>
                 <h3>Limpeza</h3>
             </div>
             <div id="Led_terapia">
-                <a href="./pag_procedimentosUS.html#proceLed">
+                <a href="./pag_procedimentosUS.php#proceLed">
                     <img src="./imagens/led_terapia.png" alt="led_terapia" class="espaco_foto">
                 </a>
                 <h3>Led Terapia</h3>

@@ -4,6 +4,10 @@ $procedimento_id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] : null;
 $user_id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION['procedimento_escolhido'] : 'Nenhum procedimento selecionado';
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,7 +15,7 @@ $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilo.pag_agendamento_agendarUS.css">
+    <link rel="stylesheet" href="estilo.pag_agendamento_agendarUS.css">
     <title>LERÊ - AGENDAR</title>
     <script src="pag_agendamento_agendarJS.js" defer></script>
 
@@ -86,6 +90,13 @@ $procedimento_escolhido = isset($_SESSION['procedimento_escolhido']) ? $_SESSION
         } else {
             console.log("Nenhum procedimento foi selecionado.");
         }
+
+        // Mostrar o ID do usuário no console
+        const userId = <?php echo json_encode($user_id); ?>;
+        console.log("ID do usuário: " + userId);
+
+
+
 
 
     </script>

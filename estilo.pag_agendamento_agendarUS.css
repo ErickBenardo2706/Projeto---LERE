@@ -185,6 +185,11 @@ h3 {
     gap: 10px;
 }
 
+.horario-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
 
 
 .horario-btn {
@@ -202,6 +207,28 @@ h3 {
     background-color: #2849a1;
 }
 
+.horario-btn-disabled {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    pointer-events: none;
+    /* Impede clique */
+}
+
+.fc-col-header-cell {
+    opacity: 1 !important;
+    /* Remover transparência */
+    background-color: #f0f0f0 !important;
+    /* Opcional: Adicionar um fundo claro para os cabeçalhos */
+}
+
+/* Estilos para os dias passados */
+.fc-day[style*="pointer-events: none"] {
+    pointer-events: none;
+    /* Impede clique em dias passados */
+    opacity: 0.5;
+}
+
 
 .fc-day.fc-day-sun {
     background-color: rgba(0, 0, 0, 0.1) !important;
@@ -211,6 +238,39 @@ h3 {
 }
 
 .fc-day-today {
+    opacity: 1 !important;
     background-color: #541a8bab !important;
     color: white;
+}
+
+.fc-day-disabled {
+    background-color: rgba(200, 200, 200, 0.5);
+    /* Cor meio transparente */
+    pointer-events: none;
+    /* Impede cliques */
+    cursor: not-allowed;
+    /* Cursor indicando não clicável */
+}
+
+
+
+@media (max-width: 1366px) {
+
+    #img_logo {
+        width: 150px;
+        margin-left: 45%;
+        margin-bottom: -26px;
+    }
+
+
+    .logado_ou_nao {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        right: -15%;
+        top: 5px;
+        gap: 10px;
+        color: #551A8B;
+    }
 }

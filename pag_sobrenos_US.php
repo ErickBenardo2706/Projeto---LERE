@@ -10,7 +10,7 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilo_pagsobrenosUS.css">
+    <link rel="stylesheet" href="estilo_pagsobrenosUS.css">
 
     <title>LERÊ - SOBRE NÓS</title>
     <script>
@@ -52,7 +52,7 @@ $nome_usuario = isset($_SESSION['nome_completo']) ? $_SESSION['nome_completo'] :
     <div class="corpo">
 
         <h2>Sobre Nós</h2>
-        <p>Bem-vindo à LERÊ, a sua referência em estética facial e bem-estar! Fundada há [X] anos, <br>
+        <p>Bem-vindo à LERÊ, a sua referência em estética facial e bem-estar! Fundada há 3 anos, <br>
             nossa missão é proporcionar uma experiência transformadora e personalizada para cada <br>
             cliente, utilizando o que há de mais avançado em técnicas e produtos de cuidados faciais.
             <br>

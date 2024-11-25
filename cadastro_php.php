@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-session_start();
+session_start();  // Inicia a sessão
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Captura os dados do formulário
@@ -34,8 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Cadastro realizado com sucesso
-        $_SESSION['nome_completo'] = $nome;
-        header("Location: pag_inicial_US.php"); // Redireciona para a página inicial
+        $usuario_id = $stmt->insert_id;  // Pega o ID do usuário recém-criado
+        $_SESSION['id'] = $usuario_id; // Armazena o ID do usuário na sessão
+        $_SESSION['nome_completo'] = $nome;  // Armazena o nome do usuário na sessão
+
+        // Redireciona para a página inicial com a sessão do usuário
+        header("Location: pag_inicial_US.php");
         exit();
     } else {
         echo "Erro: " . $stmt->error;

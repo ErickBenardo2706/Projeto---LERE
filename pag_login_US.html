@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>LERÊ - LOGIN</title>
     <link rel="stylesheet" href="estilo_pagloginUS.css">
 </head>
+
 <body>
     <div class="box">
         <form action="login.php" method="POST">
@@ -19,11 +21,11 @@
             <br><br>
             <div class="inputBox">
                 <div class="ajuste_display_senha">
-                         <input type="password" name="senha" id="password" class="inputUser" autocomplete="off" required>
-                            <button type="button" class="botaoestilo" onclick="togglePassword()" id="toggleButton">
-                                <img src="imagens/eye-fill.png"id="toggleIcon" style="width: 21px; height: 21px;">
-                            </button>
-                         <label for="senha" class="labelInput" id="label_senha">Senha</label>
+                    <input type="password" name="senha" id="password" class="inputUser" autocomplete="off" required>
+                    <button type="button" class="botaoestilo" onclick="togglePassword()" id="toggleButton">
+                        <img src="imagens/eye-fill.png" id="toggleIcon" style="width: 21px; height: 21px;">
+                    </button>
+                    <label for="senha" class="labelInput" id="label_senha">Senha</label>
                 </div>
             </div>
             <!-- Mensagens de erro usando spans -->
@@ -55,33 +57,34 @@
         }
 
         function toggleDropdown() {
-    const dropdown = document.getElementById("menuDropdown");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-}
+            const dropdown = document.getElementById("menuDropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
 
-// Fechar o dropdown se o usuário clicar fora dele
-window.onclick = function(event) {
-    if (!event.target.matches('#login_icon')) {
-        const dropdowns = document.getElementsByClassName("dropdown");
-        for (let i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].style.display = "none";
+        // Fechar o dropdown se o usuário clicar fora dele
+        window.onclick = function (event) {
+            if (!event.target.matches('#login_icon')) {
+                const dropdowns = document.getElementsByClassName("dropdown");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = "none";
+                }
+            }
         }
-    }
-}
-function togglePassword() {
-        const passwordField = document.getElementById("password");
-        const toggleIcon = document.getElementById("toggleIcon");
-        
-        if (passwordField.type === "password") {
-            passwordField.type = "text";
-            toggleIcon.src = "imagens/eye-slash-fill.png"; // Ícone de olho fechado
-           
-        } else {
-            passwordField.type = "password";
-            toggleIcon.src = "imagens/eye-fill.png"; // Ícone de olho aberto
-            
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleIcon = document.getElementById("toggleIcon");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.src = "imagens/eye-slash-fill.png"; // Ícone de olho fechado
+
+            } else {
+                passwordField.type = "password";
+                toggleIcon.src = "imagens/eye-fill.png"; // Ícone de olho aberto
+
+            }
         }
-    }
     </script>
 </body>
+
 </html>

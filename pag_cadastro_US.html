@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="estilo_pagcadastroUS.css">
     <script src="./cadastro_JS.js" defer></script>
 </head>
+
 <body>
     <div class="box">
         <form id="form" action="./cadastro_php.php" method="post">
@@ -29,20 +31,22 @@
                 <br><br>
                 <div class="inputBox">
 
-                            
-                    <input senha type="password" name="senha" id="password" class="inputUser" autocomplete="off" required>
+
+                    <input senha type="password" name="senha" id="password" class="inputUser" autocomplete="off"
+                        required>
                     <button type="button" class="botaoestilo" onclick="togglePassword()" id="toggleButton">
-                        <img src="imagens/eye-fill.png"id="toggleIcon" style="width: 21px; height: 21px;">
+                        <img src="imagens/eye-fill.png" id="toggleIcon" style="width: 21px; height: 21px;">
                     </button>
                     <label for="senha" class="labelInput">Senha</label>
                     <span class="span_required">Digite sua senha com no mínimo 8 caracteres</span>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="password" name="confirmar_senha" id="confirmar_senha" class="inputUser" autocomplete="off" required>
+                    <input type="password" name="confirmar_senha" id="confirmar_senha" class="inputUser"
+                        autocomplete="off" required>
                     <button type="button" class="botaoestilo" onclick="togglePasswordConfirmar()" id="toggleButton">
-                        <img src="imagens/eye-fill.png"id="toggleIcon_confirmar" style="width: 21px; height: 21px;">
-                    </button> 
+                        <img src="imagens/eye-fill.png" id="toggleIcon_confirmar" style="width: 21px; height: 21px;">
+                    </button>
                     <label for="confirmar_senha" class="labelInput">Confirmar Senha</label>
                     <span class="span_required">Senhas devem ser compatíveis</span>
                 </div>
@@ -69,4 +73,5 @@
         </form>
     </div>
 </body>
+
 </html>

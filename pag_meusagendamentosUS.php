@@ -45,7 +45,7 @@ if ($user_id !== null) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LERÊ - MEUS AGENDAMENTOS</title>
-    <link rel="stylesheet" href="./estilo_pagmeusagendamentosUS.css">
+    <link rel="stylesheet" href="estilo_pagmeusagendamentosUS.css">
     <script src="./meus_agendamentos.js"></script>
 </head>
 
